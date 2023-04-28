@@ -3,6 +3,7 @@
 
 
 
+
 function fetchProduct(id) {
     return fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json());
@@ -10,7 +11,7 @@ function fetchProduct(id) {
   
   function updateProduct(product, idPrefix) {
     const titleEl = document.getElementById(`${idPrefix}-product-title`);
-    const priceEl = document.getElementById(`${idPrefix}-product-price`);
+    priceEl = document.getElementById(`${idPrefix}-product-price`);
     const imageEl = document.getElementById(`${idPrefix}-product-image`);
   
     titleEl.textContent = product.title;
@@ -40,7 +41,7 @@ fetchProduct(1)
 var countEl = document.getElementById("anzahl1")
 
 var count1 = 0
-var preis1 = 
+var preis1 = 234
 
 function anzahl1erh(){
     count1 = count1 + 1
