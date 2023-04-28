@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="main.css">
     
 </head>
-<body style="text-align: center;">
+<body style="text-align: center;" >
 
     <!-- head bild -->
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -38,9 +38,11 @@
 <!-- Cards -->
 
 <!-- Handy 1 -->
-<div style="display: flex; flex-wrap: wrap; ">
+<div  class="container">
+<div class="row row-cols-1 row-cols-lg-4 ">  
+
     <div class="card" >
-        <img id="1-product-image" alt="Produktbild" src="bilder/hamburger.jpg" class="card-img-top" >
+        <img id="1-product-image" alt="Produktbild" src="bilder/hamburger.jpg" class="card-img-top " >
         <div class="card-body">
         <h5 id="1-product-title" class="card-title"> iPhone 9</h5>
         <p class="card-text">Das iPhone 8 ist ein Smartphone von Apple, das im Jahr 2017 auf den Markt kam. Es verfügt über einen Touch-ID-Fingerabdrucksensor, eine 12-Megapixel-Kamera und ist wasser- und staubdicht.</p>
@@ -88,8 +90,44 @@
 </div>
 <!-- Handy 3 ende -->
 
+<!-- Handy 4 -->
+<div class="card" >
+    <img id="4-product-image" alt="Produktbild" class="card-img-top" alt="Stake mit Spargel">
+    <div class="card-body">
+    <h5 id="4-product-title" class="card-title"></h5>
+    <p class="card-text">Das Samsung Universum 9 ist eine Reihe von Android-Smartphones von Samsung Electronics. Hat ebenfals eine hochwertige Kamera, erweiterbarer Speicher und die Möglichkeit, drahtlos aufzuladen.</p>
+    <p id="4-product-price"></p>
+    <p id="anzahl4">Anzahl:</p> 
+
+    <div class="cardbutton">
+        <button class="btn btn-outline-primary" id="Anzahl-btn" onclick="anzahl4erh()" style="margin: 5px;">mehr kaufen</button>
+        <button class="btn btn-outline-danger" id="Anzahl-btn" onclick="anzahl4senk()" style="margin: 5px;">weniger kaufen</button>
+    </div>
+
+    </div>
+</div>
+<!-- Handy 4 ende -->
+
+<!-- Handy 5 -->
+<div class="card" >
+    <img id="5-product-image" alt="Produktbild" class="card-img-top" alt="Stake mit Spargel">
+    <div class="card-body">
+    <h5 id="5-product-title" class="card-title"></h5>
+    <p class="card-text">Das Samsung Universum 9 ist eine Reihe von Android-Smartphones von Samsung Electronics. Hat ebenfals eine hochwertige Kamera, erweiterbarer Speicher und die Möglichkeit, drahtlos aufzuladen.</p>
+    <p id="5-product-price"></p>
+    <p id="anzahl5">Anzahl:</p> 
+
+    <div class="cardbutton">
+        <button class="btn btn-outline-primary" id="Anzahl-btn" onclick="anzahl5erh()" style="margin: 5px;">mehr kaufen</button>
+        <button class="btn btn-outline-danger" id="Anzahl-btn" onclick="anzahl5senk()" style="margin: 5px;">weniger kaufen</button>
+    </div>
+
+    </div>
+</div>
+<!-- Handy 5 ende -->
 
 
+</div>  
 </div>
 
 
