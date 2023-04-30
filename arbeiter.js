@@ -941,14 +941,6 @@ function anzahl30senk(){
 
 var gesamtPr = document.getElementById("gesamtp")
 
-
-// function komplettpreis(){
-//   preis1 =parseInt( document.getElementById(`${1}-product-price`).innerText);
-//     ergebnis = (count1*preis1) + (count2*preis2) + (count3*preis3)
-//     gesamtPr.innerText = ("Gesamtpreis: ") + ergebnis.toFixed(2) + ("€")
-//     return ergebnis
-// }
-
 function komplettpreis(){
     ergebnis = (count1*preis1) + (count2*preis2) + (count3*preis3) + (count4*preis4) + (count5*preis5) + (count6*preis6) + 
     (count7*preis7) + (count8*preis8) + (count9*preis9) + (count10*preis10) + (count11*preis11) + (count12*preis12) + (count13*preis13) +
@@ -957,8 +949,7 @@ function komplettpreis(){
     + (count28*preis28) + (count31*preis31) + (count30*preis30);
     gesamtPr.innerText = ("Gesamtpreis: ") + ergebnis.toFixed(2) + ("€");
     return ergebnis
-}
-
+};
 
 // Gesamtpreis Ende
 
@@ -967,7 +958,7 @@ function komplettpreis(){
 
 
 function reset() {
-    alert("Der Kunde hat diesen Betrag bezahlt.\n" + ergebnis.toFixed(2) + "€");
+    alert("Dieser Betrag wurde bezahlt.\n" + ergebnis.toFixed(2) + "€");
     count1 = 0;count2 = 0;count3 = 0;count4 = 0;count5 = 0;count6 = 0;count7 = 0;count8 = 0;count9 = 0;count10 = 0;
     count11 = 0;count12 = 0;count13 = 0;count14 = 0;count15 = 0;count16 = 0;count17 = 0;count18 = 0;count19 = 0;count20 = 0;
     count21 = 0;count22 = 0;count23 = 0;count24 = 0;count25 = 0;count26 = 0;count27 = 0;count28 = 0;count31 = 0;count30 = 0;
@@ -985,3 +976,8 @@ function reset() {
 };
 
 // Button Bezahlt ende 
+
+
+// ToolTip
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

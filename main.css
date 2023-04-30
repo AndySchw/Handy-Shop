@@ -16,15 +16,29 @@ body{
     margin-top: 50px;
 }
 
+.sticky-btn-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    margin-bottom: 60px;
+  }
 
-
+.einkaufswagen{
+    width: 60px;
+}
  
 
 .imgcard{
-    height: 230px;
+    height: 220px;
     width: 20rm;
     margin: 0px;
     
+}
+
+.modalartentfernenbtn{
+    right: 0px;
+
 }
 
 #Anzahl-btn{
@@ -73,6 +87,11 @@ body{
         margin: 0px;
         
     }
+
+    .einkaufswagen{
+        width: 40px;
+    }
+
   }
 
   @media (max-width: 850px) {
@@ -94,7 +113,7 @@ body{
         width: 190px;
     }
     .imgcard{
-        height: 220px;
+        height: 200px;
         width: 20rm;
         margin: 0px;
         
@@ -105,5 +124,17 @@ body{
         margin-right: 0px;
         margin-top: 50px;
     }
+
+    .einkaufswagen{
+        width: 30px;
+    }
+
+    .sticky-btn-container {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-right: 20px;
+        margin-bottom: 40px;
+      }
 
   }

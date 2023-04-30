@@ -640,77 +640,79 @@
 
 <!-- Cards Ende-->
     
-<hr style="height: 5px; margin-left: 300px; margin-right: 300px;">
 
-<!-- Gesamtpreis und bezahlen -->
-<div style="text-align: center; display: block;">
-<p id="gesamtp" >Gesamtpreis: </p>
-
-<button onclick="reset()"   type="button" class="btn btn-outline-success" >Bezahlt</button>
-</div>
 
 
 <!-- Warenkorb -->
 
+<div class="sticky-btn-container">
+    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#cartModal">
+        <img src="bilder/cart.png" alt="Einkaufswagen Symbol" class="einkaufswagen">
+    </button>
+    
+  </div>
+
+
 <!-- Warenkorb Schaltfläche -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
-    Warenkorb anzeigen
-  </button>
+
   
   <!-- Warenkorb Modal -->
-  <!-- <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+ 
+  <div class="modal fade" id="cartModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Warenkorb</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h1 class="modal-title fs-5" >Warenkorb</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Artikel</th>
-                <th>Anzahl</th>
-                <th>Preis</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Produkt 1</td>
-                <td>2</td>
-                <td>19.98 €</td>
-                <td>
-                  <button type="button" class="btn btn-danger btn-sm">Entfernen</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Produkt 2</td>
-                <td>1</td>
-                <td>9.99 €</td>
-                <td>
-                  <button type="button" class="btn btn-danger btn-sm">Entfernen</button>
-                </td>
-              </tr>
-            </tbody>
+          <table>
+            <thead></thead>
+                <tr>
+                    <td>Artikel</td>
+                    <td></td>
+                    <td>Anzahl</td>
+                    <td></td>
+                    <td>Einzelpreis</td>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iphone 9 super klasse</td>
+                <td></td>
+                <td>4</td>
+                <td></td>
+                <td>1734€</td>
+                <td><button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Artikel entfernen">
+                    
+                  </button></td>
+            </tr>
+            <tr>
+                <td>Iphone 9 super klasse</td>
+                <td></td>
+                <td>4</td>
+                <td></td>
+                <td>1734€</td>
+                <td><button type="button" class="btn-close" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Artikel entfernen">
+                    
+                  </button></td>
+            </tr>
+        </tbody>
+
           </table>
-          <div class="text-right">
-            <p>Gesamtkosten: 29.97 €</p>
-          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Weiter einkaufen</button>
-          <button type="button" class="btn btn-primary">Zur Kasse gehen</button>
+            <p id="gesamtp" >Gesamtpreis: </p>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            <button type="button" class="btn btn-primary" onclick="reset()">Bezahlen</button>
         </div>
       </div>
     </div>
-  </div> --> 
+  </div>
+  
+  
 
-<!-- Warenkorb Modal -->
-
-
+<!-- Warenkorb Modal ende -->
 
 
 
@@ -721,5 +723,8 @@
 
     <!-- Script -->
     <script type="text/javascript" src="arbeiter.js"></script>
+
+    
+
 </body>
 </html>
