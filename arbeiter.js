@@ -647,9 +647,10 @@ fetchProduct(21)
     });
 
 
+
 var countEl21 = document.getElementById("anzahl21")
 var count21 = 0
-var preis21 = 20
+var preis21 = 70
 
 function anzahl21erh(){
     count21 = count21 + 1 
