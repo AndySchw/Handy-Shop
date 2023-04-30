@@ -1,18 +1,46 @@
+body{
+    background-color: lightcyan;
+}
+
 .card{
+    height: 700px;
     width: 20rem; 
     margin: 30px; 
     border-color: white;
+    padding: 0px;
 }
 
-.imghead{
-    width: 200px;
+.row{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+
+
+ 
+
+.imgcard{
+    height: 230px;
+    width: 20rm;
+    margin: 0px;
     
 }
 
+#Anzahl-btn{
+    padding: 3px;
 
-img{
-    height: 250px;
+    text-align: center;
+    height: 30px;
+    font-size: 14px;
+    width: 190px;
+    bottom: 0px;
+  
+  
+  
+ 
 }
+
 
 .card {
     
@@ -30,3 +58,52 @@ img{
     display: flex;
     justify-content: flex-end;
 }
+
+@media (max-width: 1630px) {
+    .card{
+        height: 700px;
+        width: 13.5rem; 
+        margin: 30px; 
+        border-color: white;
+        padding: 0px;
+    }
+    .imgcard{
+        height: 150px;
+        width: 13.5rm;
+        margin: 0px;
+        
+    }
+  }
+
+  @media (max-width: 850px) {
+    .card{
+        height: 700px;
+        width: 19rem; 
+        margin: 30px; 
+        border-color: white;
+        padding: 0px;
+    }
+
+
+    #Anzahl-btn{
+        padding: 3px;
+    
+        text-align: center;
+        height: 40px;
+        font-size: 10px;
+        width: 190px;
+    }
+    .imgcard{
+        height: 220px;
+        width: 20rm;
+        margin: 0px;
+        
+    }
+
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 50px;
+    }
+
+  }
