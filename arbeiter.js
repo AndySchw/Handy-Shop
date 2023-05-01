@@ -982,3 +982,33 @@ function reset() {
 // ToolTip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// Warenkob befüllen und leeren
+
+
+
+let produktListe = []; // Leere Liste erstellen
+
+function addElement(element) {
+  produktListe.push(element); // Element am Ende der Liste hinzufügen
+}
+
+function removeElement(element) {
+  let index = produktListe.indexOf(element); // Index des Elements finden
+  if (index > -1) { // Element gefunden
+    produktListe.splice(index, 1); // Element aus der Liste entfernen
+  }
+}
+
+
+// füllen
+addElement("Apfel");
+addElement("Birne");
+addElement("Banane");
+console.log(produktListe); // Ausgabe: ["Apfel", "Birne", "Banane"]
+
+
+
+//leeren
+removeElement("Birne");
+console.log(produktListe); // Ausgabe: ["Apfel", "Banane"]
