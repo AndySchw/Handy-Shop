@@ -967,32 +967,13 @@ function komplettpreis(){
 // Button Bezahlt
 
 
-function reset() {
-    alert("Dieser Betrag wurde bezahlt.\n" + ergebnis.toFixed(2) + "€");
 
-    cartItems.splice(0, cartItems.length)
-
-    count1 = 0;count2 = 0;count3 = 0;count4 = 0;count5 = 0;count6 = 0;count7 = 0;count8 = 0;count9 = 0;count10 = 0;
-    count11 = 0;count12 = 0;count13 = 0;count14 = 0;count15 = 0;count16 = 0;count17 = 0;count18 = 0;count19 = 0;count20 = 0;
-    count21 = 0;count22 = 0;count23 = 0;count24 = 0;count25 = 0;count26 = 0;count27 = 0;count28 = 0;count31 = 0;count30 = 0;
-    
-    
-    anzahl1erh();anzahl2erh();anzahl3erh();anzahl4erh();anzahl5erh();anzahl6erh();anzahl7erh();anzahl8erh();anzahl9erh();anzahl10erh();
-    anzahl11erh();anzahl12erh();anzahl13erh();anzahl14erh();anzahl15erh();anzahl16erh();anzahl17erh();anzahl18erh();anzahl19erh();anzahl20erh();
-    anzahl21erh();anzahl22erh();anzahl23erh();anzahl24erh();anzahl25erh();anzahl26erh();anzahl27erh();anzahl28erh();anzahl31erh();anzahl30erh();
-   
-    anzahl1senk();anzahl2senk();anzahl3senk();anzahl4senk();anzahl5senk();anzahl6senk();anzahl7senk();anzahl8senk();anzahl9senk();anzahl10senk();
-    anzahl11senk();anzahl12senk();anzahl13senk();anzahl14senk();anzahl15senk();anzahl16senk();anzahl17senk();anzahl18senk();anzahl19senk();anzahl20senk();
-    anzahl21senk();anzahl22senk();anzahl23senk();anzahl24senk();anzahl25senk();anzahl26senk();anzahl27senk();anzahl28senk();anzahl31senk();anzahl30senk();
-    
-    
-};
 
 // Button Bezahlt ende 
 
 // Warenkob befüllen und leeren
 
-const cartItems = []; // initialisiert das Warenkorb-Array
+var cartItems = []; // initialisiert das Warenkorb-Array
 
 function addToCart(item) {
   const existingItem = cartItems.find(cartItem => cartItem.name === item.name);
@@ -1014,6 +995,18 @@ function removeFromCart(itemName) {
   }
   updateCartDisplay()
 }
+// function removeFromCart(itemName) {
+//   const itemIndex = cartItems.findIndex(cartItem => cartItem.name === itemName);
+//   if (itemIndex !== -1) {
+//     const itemPrice = cartItems[itemIndex].price; // Holen Sie sich den Preis des Artikels
+//     const itemQuantity = cartItems[itemIndex].quantity; // Holen Sie sich die Anzahl des Artikels
+//     cartItems.splice(itemIndex, 1); // Entfernen Sie den Artikel aus dem Warenkorb
+//     cartTotal -= itemPrice * itemQuantity; // Ziehen Sie den Preis des
+//   }
+//   updateCartDisplay();
+//   } 
+
+
 
 function updateCartDisplay() {
   const cartItemsDiv = document.getElementById("cart-items");
@@ -1029,11 +1022,48 @@ function updateCartDisplay() {
     removeButton.addEventListener("click", () => {
       removeFromCart(item.name);
       updateCartDisplay(); // aktualisiert den Warenkorb nach Entfernung
-      
+      // if (itemIndex !== -1) {
+      //   const removedItem = cartItems.splice(itemIndex, 1)[0];
+      //   updateCartDisplay(); // aktualisiert den Warenkorb nach Entfernung
+      //   const gesamtPr = document.getElementById("gesamtp");
+      //   const alteGesamtsumme = parseFloat(gesamtPr.innerText.split(": ")[1].split("€")[0]);
+      //   const neueGesamtsumme = alteGesamtsumme - removedItem.price * removedItem.quantity;
+      //   gesamtPr.innerText = `Gesamtpreis: ${neueGesamtsumme.toFixed(2)}€`;
+      // }
     });
+    
     
     itemDiv.appendChild(removeButton);
     cartItemsDiv.appendChild(itemDiv);
   });
 
+}
+
+function enterfnbutton(countToRemove, preisToRemove){
+  ergebnis -= (countToRemove * preisToRemove);
+}
+
+function reset() {
+  // alert("Dieser Betrag wurde bezahlt.\n" + ergebnis.toFixed(2) + "€");
+
+  count1 = 0;count2 = 0;count3 = 0;count4 = 0;count5 = 0;count6 = 0;count7 = 0;count8 = 0;count9 = 0;count10 = 0;
+  count11 = 0;count12 = 0;count13 = 0;count14 = 0;count15 = 0;count16 = 0;count17 = 0;count18 = 0;count19 = 0;count20 = 0;
+  count21 = 0;count22 = 0;count23 = 0;count24 = 0;count25 = 0;count26 = 0;count27 = 0;count28 = 0;count31 = 0;count30 = 0;
+  
+  
+  anzahl1erh();anzahl2erh();anzahl3erh();anzahl4erh();anzahl5erh();anzahl6erh();anzahl7erh();anzahl8erh();anzahl9erh();anzahl10erh();
+  anzahl11erh();anzahl12erh();anzahl13erh();anzahl14erh();anzahl15erh();anzahl16erh();anzahl17erh();anzahl18erh();anzahl19erh();anzahl20erh();
+  anzahl21erh();anzahl22erh();anzahl23erh();anzahl24erh();anzahl25erh();anzahl26erh();anzahl27erh();anzahl28erh();anzahl31erh();anzahl30erh();
+ 
+  anzahl1senk();anzahl2senk();anzahl3senk();anzahl4senk();anzahl5senk();anzahl6senk();anzahl7senk();anzahl8senk();anzahl9senk();anzahl10senk();
+  anzahl11senk();anzahl12senk();anzahl13senk();anzahl14senk();anzahl15senk();anzahl16senk();anzahl17senk();anzahl18senk();anzahl19senk();anzahl20senk();
+  anzahl21senk();anzahl22senk();anzahl23senk();anzahl24senk();anzahl25senk();anzahl26senk();anzahl27senk();anzahl28senk();anzahl31senk();anzahl30senk();
+  
+  clearCart()
+  
+};
+
+function clearCart() {
+  cartItems.splice(0, cartItems.length);
+  updateCartDisplay();
 }
