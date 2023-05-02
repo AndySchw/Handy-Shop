@@ -33,6 +33,7 @@ function fetchProduct(id) {
 fetchProduct(1)
     .then((product) => {
       updateProduct(product, '1');
+
     })
     .catch((error) => {
       console.error('Fehler beim Abrufen des Produkts:', error);
@@ -42,13 +43,20 @@ fetchProduct(1)
 var countEl = document.getElementById("anzahl1")
 
 var count1 = 0
-var preis1 = 0
+var preis1 = 549
 
 function anzahl1erh(){
     count1 = count1 + 1
-    
     countEl.innerText = ("Anzahl: ") + count1
+    
     komplettpreis()
+    
+    
+    addToCart({ name: document.getElementById(`${1}-product-title`).innerText, 
+    price: parseInt( document.getElementById(`${1}-product-price`).innerText)});
+    
+    
+    
     
 }
 
@@ -987,28 +995,53 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 
 
 
-let produktListe = []; // Leere Liste erstellen
+// let produktListe = []; // Leere Liste erstellen
 
-function addElement(element) {
-  produktListe.push(element); // Element am Ende der Liste hinzufügen
+// function addElement(element) {
+//   produktListe.push(element); // Element am Ende der Liste hinzufügen
+// }
+
+// function removeElement(element) {
+//   let index = produktListe.indexOf(element); // Index des Elements finden
+//   if (index > -1) { // Element gefunden
+//     produktListe.splice(index, 1); // Element aus der Liste entfernen
+//   }
+// }
+
+
+// // füllen
+// addElement(Produkt + count1 + preis1);
+
+// //leeren
+// removeElement("Birne");
+
+
+
+// document.getElementById(`${1}-product-title`).innerText, 
+// document.getElementById(`${1}-product-price`).innerText
+
+function updateCartPopup() {
+  const cartItemsDiv = document.getElementById("cart-items");
+  
+  cartItemsDiv.innerHTML = "";
+  let total = 0;
+  cartItems.forEach(item => {
+    const itemDiv = document.createElement("div");
+    itemDiv.innerHTML = `${item.name} - ${item.price} - ${count1}`;
+    
+    cartItemsDiv.appendChild(itemDiv);
+    
+    total += item.price;
+  });
+  cartTotalDiv.innerHTML = `Total: ${ergebnis}`;
+  // cartCountDiv.innerHTML = 
+  document.getElementById("cart-popup").style.display = "block";
+  
 }
 
-function removeElement(element) {
-  let index = produktListe.indexOf(element); // Index des Elements finden
-  if (index > -1) { // Element gefunden
-    produktListe.splice(index, 1); // Element aus der Liste entfernen
-  }
+const cartItems = []; // Hier wird der Warenkorb gespeichert
+
+function addToCart(item) {
+  cartItems.push(item);
+  updateCartPopup();
 }
-
-
-// füllen
-addElement("Apfel");
-addElement("Birne");
-addElement("Banane");
-console.log(produktListe); // Ausgabe: ["Apfel", "Birne", "Banane"]
-
-
-
-//leeren
-removeElement("Birne");
-console.log(produktListe); // Ausgabe: ["Apfel", "Banane"]
