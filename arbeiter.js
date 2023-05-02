@@ -728,7 +728,6 @@ fetchProduct(21)
     });
 
 
-
 var countEl21 = document.getElementById("anzahl21")
 var count21 = 0
 var preis21 = 70
