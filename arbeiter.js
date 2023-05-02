@@ -88,7 +88,7 @@ function anzahl2erh(){
     count2 = count2 + 1 
     countEl2.innerText = ("Anzahl: ") + count2
     
-    addToCart({ name: document.getElementById(`2-product-title`).innerText, price: preis2, quantity: count1})
+    addToCart({ name: document.getElementById(`2-product-title`).innerText, price: preis2, quantity: count2})
     komplettpreis()
     updateCartDisplay()
 }
@@ -123,7 +123,7 @@ var preis3 = 1249
 function anzahl3erh(){
     count3 = count3 + 1 
     countEl3.innerText = ("Anzahl: ") + count3
-    addToCart({ name: document.getElementById(`3-product-title`).innerText, price: preis3, quantity: count1})
+    addToCart({ name: document.getElementById(`3-product-title`).innerText, price: preis3, quantity: count3})
     komplettpreis()
     updateCartDisplay()
 }
